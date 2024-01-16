@@ -1,0 +1,17 @@
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{layout/layout}">
+
+<main layout:fragment="content">
+    <div class="container py-5 my-5">
+        <h1 class="text-capitalize text-center mb-3">Teşekkür ederim!</h1>
+        <p class="fs-3 text-center">Şunun için kayıtlısınız: <strong th:text="${service.name}"></strong></p>
+        <p class="fs-3 text-center">tarih <strong th:text=" ${dateString}"></strong>
+            <strong th:text="' saat ' + ${timeString}"></strong>
+        </p>
+        <p class="text-center">
+            <a th:href="@{/book/service}" class="btn btn-primary btn-lg mt-5 text-center">Book Again</a>
+        </p>
+    </div>
+</main>
+</html>
